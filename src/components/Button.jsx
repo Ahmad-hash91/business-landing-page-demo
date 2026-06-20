@@ -1,8 +1,8 @@
-export default function Button({ children, styleProps, onClickHandler }) {
+export default function Button({ children, className, onClickHandler }) {
   return (
     <button
       type="button"
-      className={styleProps ? styleProps : ""}
+      className={className ? className : ""}
       onClick={onClickHandler}
     >
       {children}
