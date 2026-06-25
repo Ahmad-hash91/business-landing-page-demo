@@ -3,6 +3,7 @@ import Features from "./components/Features";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <SocialProof />
       <Features />
       <About />
+      <Testimonials />
     </>
   );
 }
