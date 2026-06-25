@@ -1,4 +1,5 @@
 import About from "./components/About";
+import FAQ from "./components/FAQ";
 import Features from "./components/Features";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -14,6 +15,7 @@ function App() {
       <Features />
       <About />
       <Testimonials />
+      <FAQ />
     </>
   );
 }
