@@ -2,6 +2,7 @@ import About from "./components/About";
 import ClosingCTA from "./components/ClosingCTA";
 import FAQ from "./components/FAQ";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
@@ -18,6 +19,7 @@ function App() {
       <Testimonials />
       <FAQ />
       <ClosingCTA />
+      <Footer />
     </>
   );
 }
