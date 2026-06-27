@@ -1,3 +1,4 @@
+import handshake from "../../assets/handshake.avif";
 export default function About({ translations }) {
   return (
     <section
@@ -26,13 +27,11 @@ export default function About({ translations }) {
             ))}
           </ul>
         </div>
-        <div
-          role="img"
-          aria-label="About us visual"
-          className="bg-border rounded-2xl aspect-square flex items-center justify-center"
-        >
-          <p className="text-text-gray text-sm">Image placeholder</p>
-        </div>
+
+        <img
+          src={handshake}
+          className="object-cover h-full w-full rounded-2xl"
+        />
       </div>
     </section>
   );

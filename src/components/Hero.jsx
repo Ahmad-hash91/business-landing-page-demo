@@ -1,5 +1,5 @@
 import Button from "./Button";
-
+import workplace from "../../assets/workplace.jpeg";
 export default function Hero({ translations }) {
   return (
     <section className="px-6 py-20 md:py-28 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -21,9 +21,8 @@ export default function Hero({ translations }) {
           {translations.cta}
         </Button>
       </div>
-      <div className="bg-border rounded-2xl aspect-square flex items-center justify-center">
-        <p className="text-text-gray text-sm">Image placeholder</p>
-      </div>
+
+      <img src={workplace} className="object-cover h-full w-full rounded-2xl" />
     </section>
   );
 }
