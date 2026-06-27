@@ -1,4 +1,5 @@
 import About from "./components/About";
+import ClosingCTA from "./components/ClosingCTA";
 import FAQ from "./components/FAQ";
 import Features from "./components/Features";
 import Header from "./components/Header";
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Testimonials />
       <FAQ />
+      <ClosingCTA />
     </>
   );
 }
