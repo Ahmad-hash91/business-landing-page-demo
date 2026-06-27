@@ -1,4 +1,4 @@
-export default function About() {
+export default function About({ translations }) {
   return (
     <section
       id="about"
@@ -11,21 +11,11 @@ export default function About() {
             id="about-heading"
             className="text-3xl font-heading font-bold text-text-dark"
           >
-            Who We Are
+            {translations.heading}
           </h2>
-          <p className="text-text-gray leading-relaxed">
-            We are a dedicated team of professionals committed to delivering
-            exceptional results for businesses of all sizes. With years of
-            experience across multiple industries, we bring both expertise and
-            passion to every project we take on.
-          </p>
+          <p className="text-text-gray leading-relaxed">{translations.body}</p>
           <ul className="flex flex-col gap-3">
-            {[
-              "Client-first approach in everything we do",
-              "Transparent communication at every stage",
-              "Proven track record across multiple industries",
-              "Committed to long-term partnerships",
-            ].map((item, index) => (
+            {translations.bullets.map((item, index) => (
               <li
                 key={index}
                 className="flex items-center gap-3 text-text-gray"

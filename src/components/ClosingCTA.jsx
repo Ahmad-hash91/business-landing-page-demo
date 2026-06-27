@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-export default function ClosingCTA() {
+export default function ClosingCTA({ translations }) {
   const [submitted, setSubmitted] = useState(false);
 
   const submitHandler = (e) => {
@@ -20,18 +20,15 @@ export default function ClosingCTA() {
           id="contact-heading"
           className="text-3xl font-heading font-bold text-white mb-4"
         >
-          Let's Work Together
+          {translations.heading}
         </h2>
-        <p className="text-white/80 mb-10">
-          Have a project in mind? Fill out the form below and we'll get back to
-          you within 24 hours.
-        </p>
+        <p className="text-white/80 mb-10">{translations.subline}</p>
 
         {submitted ? (
           <div className="bg-white rounded-2xl p-10 flex flex-col items-center gap-4">
             <span className="text-success text-5xl">✓</span>
             <p className="text-text-dark font-semibold text-lg">
-              Thank you! We'll be in touch within 24 hours.
+              {translations.successMessage}
             </p>
           </div>
         ) : (
@@ -51,10 +48,10 @@ export default function ClosingCTA() {
                 id="username"
                 name="username"
                 required
+                placeholder={translations.namePlaceholder}
                 className="border border-border rounded-lg px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
-
             <div className="flex flex-col gap-1">
               <label
                 htmlFor="email"
@@ -67,10 +64,10 @@ export default function ClosingCTA() {
                 id="email"
                 name="email"
                 required
+                placeholder={translations.emailPlaceholder}
                 className="border border-border rounded-lg px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
-
             <div className="flex flex-col gap-1">
               <label
                 htmlFor="message"
@@ -83,17 +80,16 @@ export default function ClosingCTA() {
                 name="message"
                 maxLength={500}
                 rows={4}
-                placeholder="Tell us about your project..."
                 required
+                placeholder={translations.messagePlaceholder}
                 className="border border-border rounded-lg px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               />
             </div>
-
             <Button
               type="submit"
               className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl"
             >
-              Send Message
+              {translations.submitButton}
             </Button>
           </form>
         )}

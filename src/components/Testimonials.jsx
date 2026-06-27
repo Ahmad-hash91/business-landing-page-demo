@@ -1,30 +1,6 @@
 import { StarIcon } from "@heroicons/react/24/solid";
 
-const testimonials = [
-  {
-    quote:
-      "Working with this team was an absolute pleasure. They delivered exactly what we needed, on time and without any issues.",
-    name: "Sarah Mitchell",
-    title: "Marketing Director, BrightCo",
-    initials: "SM",
-  },
-  {
-    quote:
-      "The quality of work exceeded our expectations. Communication was clear throughout and the final result was outstanding.",
-    name: "James Okafor",
-    title: "Founder, Okafor Consulting",
-    initials: "JO",
-  },
-  {
-    quote:
-      "Fast, professional, and reliable. I've worked with many freelancers before but this experience stood out completely.",
-    name: "Lena Weber",
-    title: "Product Manager, NovaTech",
-    initials: "LW",
-  },
-];
-
-export default function Testimonials() {
+export default function Testimonials({ translations }) {
   return (
     <section
       id="testimonials"
@@ -36,10 +12,10 @@ export default function Testimonials() {
           id="testimonials-heading"
           className="text-3xl font-heading font-bold text-text-dark text-center mb-12"
         >
-          What Our Clients Say
+          {translations.heading}
         </h2>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {testimonials.map((t, index) => (
+          {translations.items.map((t, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl p-8 shadow-sm border border-border flex flex-col gap-4"

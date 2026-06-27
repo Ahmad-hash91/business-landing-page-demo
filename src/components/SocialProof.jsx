@@ -1,11 +1,4 @@
-export default function SocialProof() {
-  const stats = [
-    { value: "150+", label: "Projects Completed" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "5 Years", label: "In Business" },
-    { value: "24/7", label: "Support Available" },
-  ];
-
+export default function SocialProof({ translations }) {
   return (
     <section
       aria-labelledby="social-proof-heading"
@@ -16,7 +9,7 @@ export default function SocialProof() {
           Trusted by businesses
         </h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
-          {stats.map((stat, index) => (
+          {translations.stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center p-4">
               <span className="text-4xl font-heading font-extrabold text-primary sm:text-5xl tracking-tight">
                 {stat.value}
